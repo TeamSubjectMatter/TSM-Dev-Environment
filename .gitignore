@@ -1,2 +1,2 @@
-bin/db/
+bin/db/*
 !bin/db/.git_keep
