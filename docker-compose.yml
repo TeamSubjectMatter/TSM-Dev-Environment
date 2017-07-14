@@ -13,18 +13,6 @@ services:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: password
 
-  # wordpress:
-  #   image: wordpress
-  #   volumes:
-  #     - ./wp:/var/www/html
-  #   ports:
-  #     - "8080:80"
-  #   links:
-  #     - mysql
-  #   environment:
-  #     WORDPRESS_DB_NAME: wordpress
-  #     WORDPRESS_DB_PASSWORD: password
-
   phpfpm:
     depends_on:
       - mysql
