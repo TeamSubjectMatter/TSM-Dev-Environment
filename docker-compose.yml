@@ -1,0 +1,49 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:latest
+    volumes:
+      - "./bin/db:/var/lib/mysql"
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: password
+
+  # wordpress:
+  #   image: wordpress
+  #   volumes:
+  #     - ./wp:/var/www/html
+  #   ports:
+  #     - "8080:80"
+  #   links:
+  #     - mysql
+  #   environment:
+  #     WORDPRESS_DB_NAME: wordpress
+  #     WORDPRESS_DB_PASSWORD: password
+
+  phpfpm:
+    depends_on:
+      - mysql
+    volumes:
+      - "./web:/var/www/html"
+      - "./bin/config/php-fpm/php.ini:/usr/local/etc/php/php.ini"
+      - "./bin/config/php-fpm/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini"
+    restart: always
+    build: ./bin/dockerfiles/php-fpm
+    extra_hosts:
+      - "docker-local.dev:172.18.0.1"
+
+  nginx:
+    depends_on:
+      - phpfpm
+    ports:
+      - "8080:80"
+    image: nginx:latest
+    volumes:
+      - "./web:/var/www/html"
+      - "./bin/config/nginx/default.conf:/etc/nginx/conf.d/default.conf"
+    restart: always
