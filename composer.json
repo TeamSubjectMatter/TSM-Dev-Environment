@@ -60,5 +60,11 @@
         "type:wordpress-theme"
       ]
     }
+  },
+  "scripts": {
+    "post-update-cmd": "sh bin/scripts/post-update.sh",
+    "backup": "composer backup:db && composer backup:files",
+    "backup:db": "sh bin/scripts/backup-db.sh",
+    "backup:files": "sh bin/scripts/backup-files.sh"
   }
 }
