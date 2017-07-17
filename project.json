@@ -1,0 +1,8 @@
+{
+  "project_name": "test",
+  "host_name": "test.dev",
+  "private_ip": "192.168.42.10",
+  "database_name": "test_local",
+  "local_url": "test.dev",
+  "dev_url": "dev-zkf-composer.pantheonsite.io"
+}

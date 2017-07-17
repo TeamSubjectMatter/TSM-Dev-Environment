@@ -1,0 +1,64 @@
+{
+  "name": "ZKF Composer Test Site",
+  "description": "",
+  "version": "0.1.0",
+  "type": "project",
+  "keywords": [],
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Zakk Fleischmann",
+      "email": "fleischmann@teamsubjectmatter.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "pantheon-systems/wordpress",
+        "version": "4.8",
+        "dist": {
+          "url": "https://github.com/pantheon-systems/WordPress/archive/4.8.zip",
+          "type": "zip"
+        },
+        "source": {
+          "url": "git@github.com:pantheon-systems/WordPress.git",
+          "type": "git",
+          "reference": "4.8"
+        },
+        "type": "wordpress-core",
+        "require": {
+          "johnpbloch/wordpress-core-installer": "~0.1"
+        },
+        "extra": {
+          "wordpress-install-dir": "web/wp"
+        }
+      }
+    }
+  ],
+  "require": {
+    "composer/installers": "*",
+    "wpackagist-plugin/wp-native-php-sessions": "*",
+    "wpackagist-plugin/pantheon-advanced-page-cache": "*",
+    "wpackagist-plugin/wp-cfm": "*",
+    "pantheon-systems/wordpress": "4.8"
+  },
+  "config": {
+    "vendor-dir": "vendor",
+    "secure-http": false
+  },
+  "extra": {
+    "installer-paths": {
+      "web/wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "web/wp-content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    }
+  }
+}
