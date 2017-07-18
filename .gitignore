@@ -2,3 +2,5 @@ bin/db/*
 !bin/db/.git_keep
 
 vendor/
+
+.DS_Store
