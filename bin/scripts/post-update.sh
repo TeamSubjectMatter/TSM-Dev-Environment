@@ -19,3 +19,10 @@ then
   rm -rf web/wp/uploads
 
 fi
+
+if [ -e web/wp/wp-content/mu-plugins/pantheon/ ]
+then
+
+  mv web/wp/wp-content/mu-plugins/ web/wp-content/mu-plugins/
+
+fi
