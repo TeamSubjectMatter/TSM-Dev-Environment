@@ -26,3 +26,10 @@ then
   mv web/wp/wp-content/mu-plugins/ web/wp-content/mu-plugins/
 
 fi
+
+if [ -e web/wp/wp-content/ ]
+then
+
+  rm -rf web/wp/wp-content/
+
+fi
