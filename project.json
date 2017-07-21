@@ -1,8 +1,8 @@
 {
-  "project_name": "test",
-  "host_name": "test.dev",
+  "project_name": "teamsubjectmatter",
+  "host_name": "teamsubjectmatter.dev",
   "private_ip": "192.168.42.10",
-  "database_name": "test_local",
+  "database_name": "teamsubjectmatter_local",
   "local_url": "test.dev",
-  "dev_url": "dev-zkf-composer.pantheonsite.io"
+  "dev_url": "dev-teamsubjectmatter.pantheonsite.io"
 }
