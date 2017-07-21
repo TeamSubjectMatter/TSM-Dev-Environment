@@ -45,6 +45,9 @@
     "wpackagist-plugin/wp-native-php-sessions": "*",
     "wpackagist-plugin/pantheon-advanced-page-cache": "*",
     "wpackagist-plugin/wp-cfm": "*",
+    "wpackagist-plugin/sucuri-scanner": "*",
+    "wpackagist-plugin/wp-migrate-db": "*",
+    "wpackagist-plugin/limit-login-attempts": "*",        
     "pantheon-systems/wordpress": "4.8"
   },
   "config": {
