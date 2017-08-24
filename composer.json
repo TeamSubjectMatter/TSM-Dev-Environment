@@ -44,6 +44,8 @@
     "composer/installers": "*",
     "wpackagist-plugin/wp-native-php-sessions": "*",
     "wpackagist-plugin/pantheon-advanced-page-cache": "*",
+    "wpackagist-plugin/pantheon-hud": "*",
+    "wpackagist-plugin/wp-redis": "*",
     "wpackagist-plugin/wp-cfm": "*",
     "wpackagist-plugin/sucuri-scanner": "*",
     "wpackagist-plugin/wp-migrate-db": "*",
