@@ -20,15 +20,15 @@
       "type": "package",
       "package": {
         "name": "pantheon-systems/wordpress",
-        "version": "4.8",
+        "version": "4.8.1",
         "dist": {
-          "url": "https://github.com/pantheon-systems/WordPress/archive/4.8.zip",
+          "url": "https://github.com/pantheon-systems/WordPress/archive/4.8.1.zip",
           "type": "zip"
         },
         "source": {
           "url": "git@github.com:pantheon-systems/WordPress.git",
           "type": "git",
-          "reference": "4.8"
+          "reference": "4.8.1"
         },
         "type": "wordpress-core",
         "require": {
@@ -49,8 +49,8 @@
     "wpackagist-plugin/wp-cfm": "*",
     "wpackagist-plugin/sucuri-scanner": "*",
     "wpackagist-plugin/wp-migrate-db": "*",
-    "wpackagist-plugin/limit-login-attempts": "*",        
-    "pantheon-systems/wordpress": "4.8"
+    "wpackagist-plugin/limit-login-attempts": "*",
+    "pantheon-systems/wordpress": "4.8.1"
   },
   "config": {
     "vendor-dir": "vendor",
