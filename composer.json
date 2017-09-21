@@ -52,7 +52,6 @@
     "wpackagist-plugin/sucuri-scanner": "*",
     "wpackagist-plugin/wp-cfm": "*",
     "wpackagist-plugin/wp-migrate-db": "*",
-
     "wpackagist-plugin/wp-redis": "*"
 
 
