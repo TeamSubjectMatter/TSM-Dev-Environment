@@ -17,7 +17,7 @@ the first part, input any site URL and then select WordPress as the CMS.
 
 For the second part, input the name of the site from the `project.json` file created by the TSM-CLI.
 
-For the third step, click the link at the bottom of the page to manually migrate your site. A modal will pop up asking if you're sure you want to migrate the site manually, click 'Yes'. 
+For the third step, click the link at the bottom of the page to manually migrate your site. A modal will pop up asking if you're sure you want to migrate the site manually, click 'Yes'.
 
 This will take you to the dashboard page for the site you just created. Change the connection mode from SFTP to GIT. Then copy the git connection url (the url without 'git clone' at the
 beginning).
@@ -28,3 +28,53 @@ The last step is to add the git connection url to the `package.json` file as the
   sh bin/scripts/setup.sh
 ```
 
+# Composer
+
+When adding plugins/packages to composer, in order to avoid conflicts, add a single comma with some whitespace and add plugins/packages below. For example:
+
+```
+"require": {
+    "composer/installers": "*",
+    "pantheon-systems/wordpress": "4.8.2",
+
+    "wpackagist-plugin/pantheon-advanced-page-cache": "*",
+    "wpackagist-plugin/pantheon-hud": "*",
+    "wpackagist-plugin/wp-native-php-sessions": "*",
+
+    "wpackagist-plugin/limit-login-attempts": "*",
+    "wpackagist-plugin/sucuri-scanner": "*",
+    "wpackagist-plugin/wp-cfm": "*",
+    "wpackagist-plugin/wp-migrate-db": "*",
+    "wpackagist-plugin/wp-redis": "*"
+
+  },
+```
+
+...becomes...
+
+```
+"require": {
+    "composer/installers": "*",
+    "pantheon-systems/wordpress": "4.8.2",
+
+    "wpackagist-plugin/pantheon-advanced-page-cache": "*",
+    "wpackagist-plugin/pantheon-hud": "*",
+    "wpackagist-plugin/wp-native-php-sessions": "*",
+
+    "wpackagist-plugin/limit-login-attempts": "*",
+    "wpackagist-plugin/sucuri-scanner": "*",
+    "wpackagist-plugin/wp-cfm": "*",
+    "wpackagist-plugin/wp-migrate-db": "*",
+    "wpackagist-plugin/wp-redis": "*"
+    ,
+
+    "wpackagist-plugin/black-studio-tinymce-widget": "*",
+    "wpackagist-plugin/contact-form-7": "*",
+    "wpackagist-plugin/flamingo": "*",
+    "wpackagist-plugin/ninja-forms": "*",
+    "wpackagist-plugin/regenerate-thumbnails": "*",
+    "wpackagist-plugin/shortcode-redirect": "*",
+    "wpackagist-plugin/simple-page-ordering": "*",
+    "wpackagist-plugin/wordpress-seo": "*"
+  },
+```
