@@ -1,6 +1,7 @@
 bin/db/*
 !bin/db/.git_keep
 
+node_modules
 /vendor
 !/*/vendor
 
