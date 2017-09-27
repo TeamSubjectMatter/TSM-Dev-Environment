@@ -4,18 +4,18 @@ This is the base development environment for all WordPress projects at Subject M
 
 ## Setup
 
-*Before you start:*
+**Before you start:**
 Make sure you have [docker-compose](https:docs.docker.com/compose/) installed and set up.
 
-*Creating a new project:*
+**Creating a new project:**
 The easiest way to start a net-new project using this dev environment is with the [TSM CLI](https://www.npmjs.com/package/@subjectmatter/tsm-cli). After you generate a new project, run `composer install` to install your dependencies and set up your project.
 
-*Configuring a deployment:*
+**Configuring a deployment:**
 Deployments to Pantheon are best done through SFTP to a multi-dev branch. Once you create a new project on Pantheon, create a new Multidev Environment called `int-dev` (this is the branch you'll deploy to). Create a new repository in Beanstalk if you haven't already and push everything to a `develop` branch.
 
 Under the Deployments tab on Beanstalk, create a new deployment. You want to configure your new deployment to automatically deploy the develop branch to your `int-dev` multidev environment on Pantheon. Make sure the Connection Mode in Pantheon is set to SFTP and use the SFTP connection info to configure you're deployment.
 
-You *do not* want to deploy the entire repository to pantheon, so set the path in repository under General Settings to be `/web/wp-conten`. Under Deployment Location, you want to set the remote path to be `~/code/wp-content`. Download the environment SSH key from Beanstalk and upload it to Pantheon on the SFTP Connection Info panel. Finally, make sure you're excluding the uploads and upgrades directory in your Beanstalk deployment configuration.
+You **do not** want to deploy the entire repository to pantheon, so set the path in repository under General Settings to be `/web/wp-conten`. Under Deployment Location, you want to set the remote path to be `~/code/wp-content`. Download the environment SSH key from Beanstalk and upload it to Pantheon on the SFTP Connection Info panel. Finally, make sure you're excluding the uploads and upgrades directory in your Beanstalk deployment configuration.
 
 ## Navigating
 This environment is designed for ease-of-use during local development. For that reason, WordPress is broken up to make it easier to navigate and work with.
@@ -28,12 +28,12 @@ All your work will be under `web/wp-content`. This is where your theme and plugi
 
 ## Usage
 
-*Starting Development:*
+**Starting Development:**
 To start working on a project - new or old - just run `docker-compose up`. This will start your container network on localhost:8080. If you prefer to have your network running in the background, run `docker-compose up -d`.
 
 If this is a new project, then the first time you run it, you'll need to go through the WordPress 5-minute Install, configure WP Migrate DB Pro and then pull the production or staging database locally.
 
-*Composer:*
+**Composer:**
 
 When adding plugins/packages to composer, in order to avoid conflicts in git, add a single comma with some whitespace and add plugins/packages below. For example:
 
