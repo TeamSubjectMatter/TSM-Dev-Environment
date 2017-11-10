@@ -1,15 +1,11 @@
 {
-  "name": "ZKF Composer Test Site",
+  "name": "Project Name",
   "description": "",
   "version": "0.1.0",
   "type": "project",
   "keywords": [],
   "minimum-stability": "dev",
   "authors": [
-    {
-      "name": "Zakk Fleischmann",
-      "email": "fleischmann@teamsubjectmatter.com"
-    }
   ],
   "repositories": [
     {
@@ -20,15 +16,15 @@
       "type": "package",
       "package": {
         "name": "pantheon-systems/wordpress",
-        "version": "4.8.2",
+        "version": "4.8.3",
         "dist": {
-          "url": "https://github.com/pantheon-systems/WordPress/archive/4.8.2.zip",
+          "url": "https://github.com/pantheon-systems/WordPress/archive/4.8.3.zip",
           "type": "zip"
         },
         "source": {
           "url": "git@github.com:pantheon-systems/WordPress.git",
           "type": "git",
-          "reference": "4.8.2"
+          "reference": "4.8.3"
         },
         "type": "wordpress-core",
         "require": {
@@ -42,7 +38,7 @@
   ],
   "require": {
     "composer/installers": "*",
-    "pantheon-systems/wordpress": "4.8.2",
+    "pantheon-systems/wordpress": "4.8.3",
 
     "wpackagist-plugin/pantheon-advanced-page-cache": "*",
     "wpackagist-plugin/pantheon-hud": "*",
